@@ -1,0 +1,32 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true, // 선언 파일(*.d.ts)의 타입 체크 스킵으로 빌드 속도 향상
+    "forceConsistentCasingInFileNames": true, // 파일 이름의 대소문자 일관성 강제
+    "noUnusedLocals": true, // 사용하지 않는 지역 변수를 체크
+    "noUnusedParameters": true, // 사용하지 않는 파라미터를 체크
+    "noImplicitReturns": true, // 함수의 모든 경로에서 반환값 체크
+    "noFallthroughCasesInSwitch": true, // switch문의 case 누락 체크
+    "isolatedModules": true, // 각 파일을 독립적으로 트랜스파일 가능하도록 보장
+    "allowJs": true,
+    "jsx": "react-native",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}
