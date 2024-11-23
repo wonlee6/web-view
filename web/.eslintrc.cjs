@@ -98,6 +98,8 @@ module.exports = {
       { prefer: 'type-imports' },
     ],
     '@typescript-eslint/no-import-type-side-effects': 'error',
+    '@typescript-eslint/no-deprecated': 'off',
+    '@typescript-eslint/no-unnecessary-condition': 'off',
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'no-debugger': 'warn',
     'prefer-const': 'error',
