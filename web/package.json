@@ -38,8 +38,8 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.0.4",
     "date-fns": "^4.1.0",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "15.0.3",
+    "eslint": "^9.15.0",
+    "eslint-config-next": "^15.0.3",
     "lucide-react": "^0.460.0",
     "next": "15.0.3",
     "postcss": "^8.4.32",
@@ -52,7 +52,8 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.3.3",
     "vaul": "^1.1.1",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "zustand": "^5.0.1"
   },
   "overrides": {
     "@types/react": "npm:types-react@19.0.0-rc.1",
@@ -65,5 +66,16 @@
     "build": "bun --bun next build",
     "start": "bun --bun next start",
     "lint": "bun --bun next lint"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "prettier": "^3.3.3"
   }
 }
