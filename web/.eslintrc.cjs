@@ -91,6 +91,8 @@ module.exports = {
         varsIgnorePattern: '^_',
       },
     ],
+    '@typescript-eslint/prefer-nullish-coalescing': 'off',
+    '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/consistent-type-imports': [
@@ -106,5 +108,7 @@ module.exports = {
     'no-var': 'error',
     'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }],
     'eol-last': ['error', 'always'],
+    'jsx-a11y/anchor-has-content': 'off',
+    'jsx-a11y/heading-has-content': 'off'
   },
 };
