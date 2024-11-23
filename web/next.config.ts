@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   // experimental: {
   //   reactCompiler: true,
   // },
-  reactStrictMode: true,
+  // reactStrictMode: true,
 };
 
 export default nextConfig;
