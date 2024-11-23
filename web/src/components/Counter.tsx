@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
-import { useStore } from '@/store/useStore'
+import { useStore } from '@/store/useStore';
 
 export default function Counter() {
-  const store = useStore()
-  const { count, increment, decrement } = store()
+  const store = useStore();
+  const { count, increment, decrement } = store();
 
   return (
     <div className="flex items-center gap-4">
@@ -22,5 +22,5 @@ export default function Counter() {
         +
       </button>
     </div>
-  )
+  );
 }
