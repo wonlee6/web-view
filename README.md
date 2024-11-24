@@ -2,6 +2,8 @@
 
 React Native와 Expo를 사용한 WebView 애플리케이션입니다.
 
+![Design Preview](./assets/images/design.png)
+
 ## 기술 스택
 
 - React Native
@@ -48,21 +50,7 @@ npm install --save-dev typescript @types/react @types/react-native @typescript-e
 }
 ```
 
-### 4. 상태 관리 설정
-
-#### Zustand 설치
-
-```bash
-npm install zustand
-```
-
-#### TanStack Query 설치
-
-```bash
-npm install @tanstack/react-query
-```
-
-### 5. 스타일링 설정 (NativeWind)
+### 4. 스타일링 설정 (NativeWind)
 
 ```bash
 npm install nativewind
