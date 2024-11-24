@@ -1,35 +1,34 @@
-import { StyleSheet, Platform } from 'react-native';
-import { WebView } from 'react-native-webview';
-import { ThemedView } from '@/components/ThemedView';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useEffect, useState } from 'react';
-import * as Location from 'expo-location';
+import { StyleSheet, Platform } from 'react-native'
+import { WebView } from 'react-native-webview'
+import { ThemedView } from '@/components/ThemedView'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { useEffect, useState } from 'react'
+import * as Location from 'expo-location'
 
 export default function HomeScreen() {
-  const [location, setLocation] = useState<{ latitude: number; longitude: number } | null>(null);
+  const [location, setLocation] = useState<{ latitude: number; longitude: number } | null>(null)
 
   useEffect(() => {
-    (async () => {
-      const { status } = await Location.requestForegroundPermissionsAsync();
+    ;(async () => {
+      const { status } = await Location.requestForegroundPermissionsAsync()
       if (status !== 'granted') {
-        console.error('Permission to access location was denied');
-        return;
+        console.error('Permission to access location was denied')
+        return
       }
 
-      const location = await Location.getCurrentPositionAsync({});
-      setLocation(location.coords);
-    })();
-  }, []);
+      const location = await Location.getCurrentPositionAsync({})
+      setLocation(location.coords)
+    })()
+  }, [])
 
   if (Platform.OS === 'web') {
     // 웹 브라우저에서는 직접 리다이렉트
     if (typeof window !== 'undefined') {
-      window.location.href = 'http://localhost:3000';
+      window.location.href = 'http://localhost:3000'
     }
-    return null;
+    return null
   }
 
-  // location 정보를 웹뷰로 전달
   const injectedJavaScript = location
     ? `
         window.currentLocation = {
@@ -38,7 +37,7 @@ export default function HomeScreen() {
         };
         true;
       `
-    : '';
+    : ''
 
   return (
     <SafeAreaView style={styles.container}>
@@ -50,11 +49,11 @@ export default function HomeScreen() {
         />
       </ThemedView>
     </SafeAreaView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-  },
-});
+    flex: 1
+  }
+})
