@@ -5,6 +5,7 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import importPlugin from 'eslint-plugin-import';
 import prettierPlugin from 'eslint-plugin-prettier';
+import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
   {
@@ -23,15 +24,16 @@ export default [
       },
       globals: {
         browser: true,
-      }
+      },
     },
     plugins: {
-      '@typescript-eslint': typescriptPlugin,
-      'jsx-a11y': jsxA11y,
+      '@next/next': nextPlugin,
       react: reactPlugin,
       'react-hooks': reactHooksPlugin,
+      '@typescript-eslint': typescriptPlugin,
+      'jsx-a11y': jsxA11y,
       import: importPlugin,
-      prettier: prettierPlugin
+      prettier: prettierPlugin,
     },
     rules: {
       'import/order': [
@@ -76,7 +78,7 @@ export default [
       'react-hooks/exhaustive-deps': 'warn',
       '@typescript-eslint/no-unused-vars': [
         'warn',
-        { 
+        {
           argsIgnorePattern: '^_',
           varsIgnorePattern: '^_',
         },
@@ -101,6 +103,6 @@ export default [
       'eol-last': ['error', 'always'],
       'jsx-a11y/anchor-has-content': 'off',
       'jsx-a11y/heading-has-content': 'off',
-    }
-  }
+    },
+  },
 ];
