@@ -1,9 +1,9 @@
-import MapContainer from '@/components/map/map-container';
+import MapContainer from '@/components/map/map-container'
 
 export default function Home() {
   return (
-    <main className="h-dvh">
+    <main className='h-dvh'>
       <MapContainer />
     </main>
-  );
+  )
 }
